@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import SplitText from '../components/SplitText'
+import gettoknowImg from '../assets/images/gettoknow.jpg'
+import cultivatingImg from '../assets/images/cultivating.png'
+import creativerootsImg from '../assets/images/creativeroots.png'
 
 function About() {
   useEffect(() => {
@@ -27,9 +30,9 @@ function About() {
   }, [])
 
   return (
-    <main>
+    <main className="pt-32">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-margin-desktop max-w-container-max mx-auto">
+      <section className="pb-16 px-margin-desktop max-w-container-max mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <SplitText
@@ -52,9 +55,11 @@ function About() {
           </div>
           <div className="lg:col-span-4 flex justify-end">
             <div className="w-64 h-80 bg-primary-container/20 botany-arch relative overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-primary-container/50 to-secondary-container/30 flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-9xl opacity-40">person</span>
-              </div>
+              <img 
+                src={gettoknowImg} 
+                alt="Grace" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -64,9 +69,11 @@ function About() {
       <section className="py-20 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
         <div className="flex flex-col md:flex-row gap-12 items-center mb-32">
           <div className="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl shadow-secondary/5 rotate-[-2deg]">
-            <div className="w-full h-[500px] bg-gradient-to-br from-surface-container to-secondary-container/20 flex items-center justify-center">
-              <span className="material-symbols-outlined text-secondary text-9xl opacity-20">nature</span>
-            </div>
+            <img 
+              src={cultivatingImg} 
+              alt="Cultivating Beauty" 
+              className="w-full h-[500px] object-cover"
+            />
           </div>
           <div className="w-full md:w-1/2 pl-0 md:pl-12">
             <span className="inline-block px-4 py-1 rounded-full bg-primary-container/10 text-primary font-label-md mb-6">
@@ -84,9 +91,11 @@ function About() {
 
         <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
           <div className="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl shadow-secondary/5 rotate-[2deg]">
-            <div className="w-full h-[500px] bg-gradient-to-br from-primary-container/30 to-surface-variant flex items-center justify-center">
-              <span className="material-symbols-outlined text-primary text-9xl opacity-20">brush</span>
-            </div>
+            <img 
+              src={creativerootsImg} 
+              alt="Creative Roots" 
+              className="w-full h-[500px] object-cover"
+            />
           </div>
           <div className="w-full md:w-1/2 pr-0 md:pr-12">
             <h2 className="font-headline-lg text-headline-lg text-secondary mb-8">Creative Roots</h2>

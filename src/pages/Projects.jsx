@@ -1,5 +1,11 @@
 import { useEffect } from 'react'
 import SplitText from '../components/SplitText'
+import leafImg from '../assets/images/leaf.png'
+import unnamedImg from '../assets/images/unnamed.png'
+import flowerImg from '../assets/images/flower.png'
+import hillImg from '../assets/images/hill.png'
+import yuanziImg from '../assets/images/yuanzi.png'
+import treeImg from '../assets/images/tree.png'
 
 function Projects() {
   useEffect(() => {
@@ -51,37 +57,43 @@ function Projects() {
     {
       title: 'Wild Fern Study',
       description: 'An exploration of intricate textures and organic geometry found in ancient forest floor dwellers.',
-      icon: 'local_florist'
+      icon: 'local_florist',
+      image: leafImg
     },
     {
       title: 'The Herbarium Press',
       description: 'Curation of dried botanical specimens reimagined as high-contrast graphic elements.',
-      icon: 'spa'
+      icon: 'spa',
+      image: unnamedImg
     },
     {
       title: 'Petals & Porcelain',
       description: 'A tactile study on the intersection of fragile flora and solid, glazed ceramic surfaces.',
-      icon: 'water_drop'
+      icon: 'water_drop',
+      image: flowerImg
     },
     {
       title: 'Earth & Ember',
       description: 'Capturing the primal beauty of mineral formations and the warmth of shifting geological light.',
-      icon: 'landscape'
+      icon: 'landscape',
+      image: hillImg
     },
     {
       title: 'Secret Garden',
       description: 'Visualizing hidden sanctuaries through a lens of surreal color and architectural framing.',
-      icon: 'yard'
+      icon: 'yard',
+      image: yuanziImg
     },
     {
       title: 'Seasonal Shifts',
       description: 'Documenting the subtle transition of light and mood as the calendar moves through its cycles.',
-      icon: 'wb_twilight'
+      icon: 'wb_twilight',
+      image: treeImg
     }
   ]
 
   return (
-    <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+    <main className="pt-32 pb-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       {/* Page Header */}
       <header className="mb-24 text-center md:text-left">
         <span className="font-label-md text-primary tracking-widest mb-4 block">PORTFOLIO</span>
@@ -109,11 +121,11 @@ function Projects() {
         {projects.map((project, index) => (
           <article key={index} className="grid-item project-card group cursor-pointer">
             <div className="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
-              <div className="w-full h-full bg-gradient-to-br from-primary-container/30 to-secondary-container/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110">
-                <span className="material-symbols-outlined text-white text-9xl opacity-30">
-                  {project.icon}
-                </span>
-              </div>
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
             </div>
             <h3 className="font-headline-md text-secondary mb-2">{project.title}</h3>
             <p className="font-body-md text-on-surface-variant mb-4">{project.description}</p>

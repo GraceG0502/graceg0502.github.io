@@ -91,6 +91,7 @@ body {
 .split-parent {
   display: inline-block;
   vertical-align: top;
+  overflow: visible !important;
 }
 
 .split-word,
@@ -104,15 +105,4 @@ body {
 .split-word {
   white-space: nowrap;
   min-width: fit-content;
-}
-
-/* 确保字体完全加载后再显示 */
-.split-parent:not([data-split-loaded]) {
-  visibility: hidden;
-}
-
-/* 为 GRACE 文字设置稳定宽度 */
-.split-parent.text-primary.italic .split-word {
-  min-width: 286px;
-  width: 286px;
 }

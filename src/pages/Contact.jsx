@@ -31,7 +31,7 @@ function Contact() {
 
   return (
     <>
-      <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+      <main className="pt-32 pb-12 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Identity & Contact Methods */}
           <div className="lg:col-span-5 space-y-12">
