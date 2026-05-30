@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F4F0E8;
+  color: #001945;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.arch-mask {
+  clip-path: ellipse(100% 100% at 50% 100%);
+  border-radius: 500px 500px 0 0;
+}
+
+.botany-arch {
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+}
+
+.nav-underline {
+  position: relative;
+}
+
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #F994AF;
+  transition: width 0.3s ease;
+}
+
+.nav-underline:hover::after {
+  width: 100%;
+}
+
+.bento-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-card:hover {
+  transform: translateY(-8px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.staggered-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .staggered-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px 32px;
+  }
+  .grid-item:nth-child(3n+2) {
+    transform: translateY(64px);
+  }
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #F994AF;
+  transition: width 0.3s ease;
+}
+
+.project-card:hover .project-link::after {
+  width: 100%;
+}
+
+/* SplitText 样式优化 */
+.split-parent {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.split-word,
+.split-char,
+.split-line {
+  position: relative;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.split-word {
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+/* 确保字体完全加载后再显示 */
+.split-parent:not([data-split-loaded]) {
+  visibility: hidden;
+}
+
+/* 为 GRACE 文字设置稳定宽度 */
+.split-parent.text-primary.italic .split-word {
+  min-width: 286px;
+  width: 286px;
+}

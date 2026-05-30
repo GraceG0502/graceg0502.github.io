@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Grace | Sophisticated Playful Botanical</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#1e4288",
+                        "outline-variant": "#d8c1c5",
+                        "on-tertiary-fixed": "#1c1c17",
+                        "surface-tint": "#96435c",
+                        "on-background": "#001945",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#782c45",
+                        "tertiary": "#605e58",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#001945",
+                        "inverse-on-surface": "#eef0ff",
+                        "inverse-primary": "#ffb1c4",
+                        "surface-container": "#e9edff",
+                        "on-secondary-fixed": "#001945",
+                        "on-secondary-fixed-variant": "#1f4489",
+                        "primary": "#96435c",
+                        "surface-variant": "#d9e2ff",
+                        "secondary-container": "#92b2ff",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-surface-variant": "#534246",
+                        "surface-container-low": "#f2f3ff",
+                        "primary-container": "#f994af",
+                        "secondary": "#315399",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#d9e2ff",
+                        "on-primary-fixed": "#3f001a",
+                        "surface-bright": "#faf8ff",
+                        "primary-fixed-dim": "#ffb1c4",
+                        "outline": "#867276",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffd9e0",
+                        "inverse-surface": "#002d6e",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e6e2da",
+                        "on-tertiary-fixed-variant": "#484741",
+                        "background": "#F4F0E8",
+                        "on-primary-container": "#752942",
+                        "tertiary-container": "#b5b2ab",
+                        "on-tertiary-container": "#46453f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c9c6bf",
+                        "surface-container-high": "#e1e8ff",
+                        "surface-dim": "#cdd9ff",
+                        "surface": "#F4F0E8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .arch-mask {
+            clip-path: ellipse(100% 100% at 50% 100%);
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+        }
+        .botany-arch {
+            border-top-left-radius: 200px;
+            border-top-right-radius: 200px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface docked full-width top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-gutter max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-lg font-bold text-on-surface dark:text-inverse-on-surface">Grace</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-secondary dark:text-secondary-fixed-dim font-headline-md hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-headline-md" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-headline-md hover:text-primary transition-colors duration-300" href="#">Projects</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-headline-md hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-label-md active:scale-95 transition-transform duration-200">
+                Let's Talk
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="pt-24 pb-16 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<h1 class="font-display-lg text-display-lg text-secondary mb-8">Get to Know Grace</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant leading-relaxed">
+                        A designer dedicated to weaving organic whimsy into digital ecosystems. From the first sketch to the final pixel, my work is a study in sophisticated playfulness and botanical elegance.
+                    </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<div class="w-64 h-80 bg-primary-container/20 botany-arch relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sophisticated editorial portrait of a creative professional woman in a bright, sun-drenched studio. She is surrounded by elegant botanical elements and warm alabaster walls. The lighting is soft and high-key, reflecting a high-end luxury magazine aesthetic with tones of vibrant pink and deep royal blue in the background accents. The mood is confident and serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB73iKlS9eX24xZXhfLffqmGjh3f4nSa6VX-gOGzdr9qReYQy0wId2p46nUpT8UlfqwvgqtQEHwyYEAyauQSgqWt0yt7Rc0Ar_AAjjfC-5PIP4bMGsAxc5ATzt54APjYQrSnL_GQJSd98jPhd1W-9Q8Wdmk7L8AJaUWgeSh2VwxddFOEVoRxY0icWX0S44dQKhHHTbB3OQdiBXBw91Pr2m5LO1cHBYTKoBhR2iVOeLkQnO11Cn7bH-AAkJMsk68HkVkq0KA9tA4qs6T"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Cultivating Beauty Section (Staggered Layout) -->
+<section class="py-20 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="flex flex-col md:flex-row gap-12 items-center mb-32">
+<div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl shadow-secondary/5 rotate-[-2deg]">
+<img class="w-full h-[500px] object-cover" data-alt="A minimalist architectural interior featuring soft, curved walls and expansive white space. Warm, natural light floods the room through arched windows, creating a peaceful and creative atmosphere. The space is styled with subtle botanical touches and elegant textures, reflecting a refined editorial design aesthetic in a light-mode palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_P0cQq2-NXYGjm65_lrLkWq4MyiYVpQ1ZZxKHEUsqd6f3gdMYBzJjTrw8M54U0LjZaSQdlaIxoEsOFf3qh4DnTGCXE6NN2GKzDIaw7DcVnmySYIzUM4R7a4sf0KldPl25rL9DVkavrRnXiQLb4ChSR1G0l0hoGHqh9PCH8OwuxCLm_2kFnwqHGWOZ0LnwAt48PxdVadJuhvVShygBYgcEVz17wUzGq07aNPEGAfltPXp9k84NHToY8rUs5E21JI8fV-qyiS9hCaW-"/>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-12">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container/10 text-primary font-label-md mb-6">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-8">Cultivating Beauty</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-loose">
+                        Beauty isn't just about appearance; it's about growth. Every project I undertake begins with a seed of an idea, nurtured through careful research and intentional craftsmanship. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-loose">
+                        I believe in digital experiences that feel as natural and intuitive as a garden walk—guided by flow, punctuated by moments of wonder, and grounded in structural integrity.
+                    </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+<div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl shadow-secondary/5 rotate-[2deg]">
+<img class="w-full h-[500px] object-cover" data-alt="A creative workspace with a clean, light-filled desk. Scattered on the surface are elegant stationery items, a sleek computer, and a few artisanal objects. The lighting is diffused and warm, evoking a sense of refined creative confidence. The palette is dominated by warm alabaster and subtle pink accents, maintaining a sophisticated minimalist vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwVFnIuaPw2AbLNZCIcOzU-twcwgt2GeeRlQEQYapUj1r3cxbkJniReffqZiEtLL_EeLtOhlkDLTet2yX7aTEIVmo2hmKCqkV62q9oCuR1IGnnebDoToLL6fUYb9WTDIh-of-KmSQMvAfAC5Sm9aUMB9ow8Z34X4DG8dhy5xJWPaprzWKKlfAys_MflA7ISQDKSktNZR7q4hr2nu3m38-EfFBLZJ461shadRB16biJd19a41RrDp63508vyJWJnP-ZmVytWvJP55F9"/>
+</div>
+<div class="w-full md:w-1/2 pr-0 md:pr-12">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-8">Creative Roots</h2>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Experience Design</span>
+<span class="font-label-md text-primary">95%</span>
+</div>
+<div class="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[95%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Brand Identity</span>
+<span class="font-label-md text-primary">88%</span>
+</div>
+<div class="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[88%] transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Editorial Layout</span>
+<span class="font-label-md text-primary">92%</span>
+</div>
+<div class="h-1.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[92%] transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Location Bento -->
+<section class="py-20 bg-surface-container-low/50">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Education Card -->
+<div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/15 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="school">school</span>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4">Education</h3>
+<ul class="space-y-4">
+<li>
+<p class="font-label-md text-primary">2018 — 2022</p>
+<p class="font-body-md font-bold text-on-surface">BFA in Visual Communications</p>
+<p class="font-body-md text-on-surface-variant">Pratt Institute, New York</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Location Card -->
+<div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/15 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="location_on">location_on</span>
+<h3 class="font-headline-md text-headline-md text-secondary mb-4">Location</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Currently rooted in the vibrant creative landscape of Brooklyn, NY.</p>
+<div class="mt-auto h-40 rounded-2xl overflow-hidden grayscale contrast-125">
+<img class="w-full h-full object-cover" data-alt="A stylized, high-contrast map visual of Brooklyn, New York. The image is rendered in a minimalist, artistic style with clean lines and a sophisticated monochrome palette with subtle royal blue tints. It represents the urban yet creative spirit of the location." data-location="Brooklyn, New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjYIq5OTTqZcAiY89hMp303sb7BF5PeNtAvqVNBLZeHzlyB9YSGwafmcCMwQVpmpsDsUiBL5dskHphaRsFwukQSJIrSrA-fFZCiMLHZ6V7LVltA5T2jY0jOyALkq3K4ao84ZiStRVs5dSIf_pXM6wYmD5svIfIYYWQGthjvV5dQ-s0uKcq8-Lly83WMpGCs2_vfzAocauJ7S5S8W7te5pBnBuafib43Se6d3ktdVUnpALLSgn-0vSMriraTybKDfqibhyrHAW1uAqU"/>
+</div>
+</div>
+<!-- Awards/Extra Card -->
+<div class="bg-primary-container p-10 rounded-3xl flex flex-col justify-between text-on-primary-container">
+<div>
+<span class="material-symbols-outlined text-white text-4xl mb-6" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md mb-4">Recognition</h3>
+<ul class="space-y-4 opacity-90">
+<li class="border-b border-on-primary-container/20 pb-4">
+<p class="font-body-md font-bold">Awwwards Honorable Mention</p>
+<p class="font-label-md">Best Visual Identity 2023</p>
+</li>
+<li class="pt-4">
+<p class="font-body-md font-bold">Adobe Design Awards</p>
+<p class="font-label-md">Finalist — Digital Media</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-display-lg text-secondary mb-12">Let's grow something.</h2>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="bg-primary-container text-on-primary-container px-12 py-5 rounded-full font-label-md text-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
+                    Start a Project
+                </button>
+<button class="border-2 border-secondary text-secondary px-12 py-5 rounded-full font-label-md text-lg hover:bg-secondary hover:text-white transition-all duration-300">
+                    View Projects
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface border-t border-outline-variant/15">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-margin-desktop max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-on-surface mb-8 md:mb-0">Grace</div>
+<div class="flex gap-8 mb-8 md:mb-0">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Instagram</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">LinkedIn</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Dribbble</a>
+</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">
+                © 2024 Grace Design. All rights reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple parallax or reveal effect on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

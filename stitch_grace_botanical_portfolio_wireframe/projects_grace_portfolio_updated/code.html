@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Selected Projects | Grace Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#1e4288",
+                    "outline-variant": "#d8c1c5",
+                    "on-tertiary-fixed": "#1c1c17",
+                    "surface-tint": "#96435c",
+                    "on-background": "#001945",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#782c45",
+                    "tertiary": "#605e58",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#001945",
+                    "inverse-on-surface": "#eef0ff",
+                    "inverse-primary": "#ffb1c4",
+                    "surface-container": "#e9edff",
+                    "on-secondary-fixed": "#001945",
+                    "on-secondary-fixed-variant": "#1f4489",
+                    "primary": "#96435c",
+                    "surface-variant": "#d9e2ff",
+                    "secondary-container": "#92b2ff",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-surface-variant": "#534246",
+                    "surface-container-low": "#f2f3ff",
+                    "primary-container": "#f994af",
+                    "secondary": "#315399",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#d9e2ff",
+                    "on-primary-fixed": "#3f001a",
+                    "surface-bright": "#faf8ff",
+                    "primary-fixed-dim": "#ffb1c4",
+                    "outline": "#867276",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffd9e0",
+                    "inverse-surface": "#002d6e",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e6e2da",
+                    "on-tertiary-fixed-variant": "#484741",
+                    "background": "#F4F0E8",
+                    "on-primary-container": "#752942",
+                    "tertiary-container": "#b5b2ab",
+                    "on-tertiary-container": "#46453f",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b0c6ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "surface-container-high": "#e1e8ff",
+                    "surface-dim": "#cdd9ff",
+                    "surface": "#F4F0E8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #F4F0E8;
+            color: #001945;
+            -webkit-font-smoothing: antialiased;
+        }
+        .arch-mask {
+            clip-path: ellipse(100% 100% at 50% 100%);
+            border-radius: 500px 500px 0 0;
+        }
+        .staggered-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 48px;
+        }
+        @media (min-width: 768px) {
+            .staggered-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 64px 32px;
+            }
+            .grid-item:nth-child(3n+2) {
+                transform: translateY(64px);
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .project-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #F994AF;
+            transition: width 0.3s ease;
+        }
+        .project-card:hover .project-link::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 z-50 bg-surface">
+<div class="flex justify-between items-center w-full px-margin-desktop py-gutter max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-lg font-bold text-on-surface">Grace</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors duration-300 font-headline-md" href="#">Home</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300 font-headline-md" href="#">About</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-headline-md" href="#">Projects</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300 font-headline-md" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-label-md hover:scale-105 transition-transform duration-200 Active:scale-95">
+                Let's Talk
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+<!-- Page Header -->
+<header class="mb-24 text-center md:text-left">
+<span class="font-label-md text-primary tracking-widest mb-4 block">PORTFOLIO</span>
+<h1 class="font-display-lg text-display-lg text-secondary mb-6 leading-tight">Selected Projects</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+                A curation of botanical explorations, tactile experiments, and seasonal observations. Each piece reflects a commitment to organic elegance and refined creative whimsy.
+            </p>
+</header>
+<!-- Staggered Projects Grid -->
+<div class="staggered-grid pb-32">
+<!-- Wild Fern Study -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="Wild Fern Study" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed botanical illustration style photograph of intricate fern fronds. The lighting is soft and ethereal with a warm alabaster glow. The color palette focuses on deep royal blues and soft vibrant pink highlights, avoiding all green tones to create a surreal and sophisticated editorial aesthetic. The composition is balanced and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7r94RMO_1E8NtLKfPjZ14a4Kb17Z1V-shMaICCDxRma5qUBvdW0m5Ln7ZgFkVkJDg8SXux5TbgyS7ixogFARtChzTsyWaf5v5Wlt9QakXHoBpBWw1BQwoKqbAH6bsEBYRKEBjEXXxfaJlRZL3-6IjX5vUnmkknLo6C5ZwrXLzR-1rt-sxYOaF1a5L6yrNjf0CkIUoG59HVRwiIx59wAHBz-98l6FyMZG_eIuHtbM8xfdBqNuOkR51LD7iaUXgAgx-LqpDW_-KJdBl"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">Wild Fern Study</h3>
+<p class="font-body-md text-on-surface-variant mb-4">An exploration of intricate textures and organic geometry found in ancient forest floor dwellers.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+<!-- The Herbarium Press -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="The Herbarium Press" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High-end editorial fashion photography featuring pressed botanical specimens arranged on premium textured paper. The lighting is clean and high-key, emphasizing a light-mode luxury magazine feel. The palette is strictly deep royal blue and vibrant pink on a warm off-white surface. The mood is creative, confident, and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXiS5mPKLgOXYOao_PMvsv9vy_PUcqxu6US9d8s1ssB1sD1Aw_g3zRWA8lI-EyKSQMtWI7-U-59GIWO9O6V1RPBzTKUK9aFIloqdYwMx8k3e40qc8kgQeKqXHFP2vxXK5y_8X2Ci_O-uA655JeHeg2fZ7h93BZC26pd2Xy4p9TqT3OSrpeTgwATC_AP1dXpHsA6AoHazSP7TAr5HfiMtdM8Y63fYUmN9CgbmlxHwCfiTbiMBoK01V5H4SSwhhNvCipTwGgPNmcvOYA"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">The Herbarium Press</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Curation of dried botanical specimens reimagined as high-contrast graphic elements.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+<!-- Petals & Porcelain -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="Petals &amp; Porcelain" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist still life composition of delicate pink flower petals resting on a handcrafted blue ceramic vessel. The background is a soft, warm alabaster. Lighting is soft and directional, creating gentle shadows. The aesthetic is sophisticated and playful, blending traditional craftsmanship with modern minimalist color blocking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhRnp4AibMLkJZERRBzKNW0nWmQYk-q8BDjpkyZRAYXh8yewURSWQsX_YsjA4ogigr3KUYuKy9xC1_RrwJy40ShXGu64ZTfD0-j5vtgOcgMp0NAt8eGRauUabHn2FgMhSGhOuWT1pofSvjsESJQcAquE2fkLpujmIzrBBfCmoVv65a8vzBVQFLpcM-ZfBj7m194xpomHrl6d62TcWk7qjLBikIj1AW4CfP7eIZ60lgBCXqMCYbbKdA_R7JgsMf56FkLpqdEQt1Jvbw"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">Petals &amp; Porcelain</h3>
+<p class="font-body-md text-on-surface-variant mb-4">A tactile study on the intersection of fragile flora and solid, glazed ceramic surfaces.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+<!-- Earth & Ember -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="Earth &amp; Ember" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An abstract landscape photograph highlighting geological textures in a dramatic blue and pink color grade. No greenery is visible; instead, the focus is on light and shadow over mineral surfaces. The image feels expansive and luxury-oriented, fitting for a creative director's portfolio. The lighting suggests a sunset or sunrise glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsyK-kSPlnS4uirjRljn8dtKXDvKp-dMTMGlhoAKbKqKt2Iyvlp5HnXFnyTiaaiaZDUmNv1JIPfqluZTEkybxy_pcWp38Ue47ZEhQPe3mOeiEKx-dPphabYtfcHwb2l6O68qhvDx5MW3nwoMBTmX8y78drpSyWkFaAk2r3TGnP2mgj8vywi9EzVtFfm--t2xJ0W1z5BbnEkgnLh--LFGsTy-zLh_NmdEhtSNvc4EB4SiVYgk1eAHawOTpSZySzsVZ2FuyaJo9LRcHM"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">Earth &amp; Ember</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Capturing the primal beauty of mineral formations and the warmth of shifting geological light.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+<!-- Secret Garden -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="Secret Garden" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An arched view into a stylized courtyard garden. The foliage is treated with a blue and pink infrared-style filter, removing all greens. The architecture is minimalist with clean lines and warm stone textures. Lighting is bright and inviting, creating a sense of refined whimsical luxury and modern artistic expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlFleyxrlRZAdBC9d56Hc0lJavHnd3AgUJM_eNAjyvvmmJKunsn8NjQe8RmLgEgcNTNXHz6OykwfQf-PVnbSYJN7uqOCaunOnys2B7G42fZszV_MUukSRSIqoZOcEe74keRDI9_s1vR6ypTDtXbuRTRzQTSS4Vbz1krU1A3l-2osEPPdmLp1Ox3VTJ065yUKwIU9Ea7uvxB-WSxiKltHBXJVBrHF_mUTPcTM3LDSXlpfH-DEAoWEuk_XWpyRhiiBRAwSeN7ePj1srO"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">Secret Garden</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Visualizing hidden sanctuaries through a lens of surreal color and architectural framing.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+<!-- Seasonal Shifts -->
+<article class="grid-item project-card group cursor-pointer">
+<div class="arch-mask aspect-[4/5] bg-secondary-container/20 overflow-hidden mb-6 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(49,83,153,0.08)]">
+<img alt="Seasonal Shifts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An ethereal forest scene where light filters through branches, rendered in deep royal blues and soft pinks. The absence of green gives the scene a magical, editorial quality. The atmosphere is serene and sophisticated, with a clear focus on the play of light and the rhythm of vertical trunks. High-end artistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdwsLhzKAcpCi2H9Gm-MDRe8GkK1ZifHN_wkD5YL-YFKMgZ_RbeDDlOBw_UKXXhRveGwpiE7THReckwCppEvvKgVnrPcTfS8-Xf-seFRhHY8tzkBenpVhKcfT3voYBnHTL2E_78buSQ3gsNxGsN_FAvymbtpWQy3Qvc4R6L1xeznlwl4kN90Esv_EJKNqNXod_yKwLlU84nMKowLTRB3pz9BeGw8Cqx9Pz3eZOtiLB8qIL4xAjI4Tic5JhAN1QfmGSc4AL8kP9ArqV"/>
+</div>
+<h3 class="font-headline-md text-secondary mb-2">Seasonal Shifts</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Documenting the subtle transition of light and mood as the calendar moves through its cycles.</p>
+<div class="relative inline-block">
+<span class="project-link font-label-md text-primary uppercase tracking-wider relative">View Project</span>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/15">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-margin-desktop max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-display-lg text-headline-md text-on-surface mb-2">Grace</div>
+<p class="font-body-md text-secondary/60">© 2024 Grace Design. All rights reserved.</p>
+</div>
+<div class="flex gap-8 items-center">
+<a class="font-body-md text-secondary hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Instagram</a>
+<a class="font-body-md text-secondary hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-body-md text-secondary hover:text-primary underline decoration-2 underline-offset-4 transition-all duration-300" href="#">Dribbble</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Micro-interactions -->
+<script>
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple Fade-in Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = entry.target.classList.contains('grid-item') && window.innerWidth >= 768 && entry.target.matches(':nth-child(3n+2)') 
+                        ? 'translateY(64px)' 
+                        : 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body></html>
